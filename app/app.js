@@ -10,7 +10,7 @@ instagrammy.config(['$routeProvider', function($routeProvider){
         });
 }]);
 
-instagrammy.controller('AppController', function($scope){
+instagrammy.controller('AppController', ['$scope', 'LoginService', function($scope, LoginService){
 
     window.addEventListener('message', function(event){
         console.log('post message has been received');
@@ -18,10 +18,17 @@ instagrammy.controller('AppController', function($scope){
 
         var data = JSON.parse(event.data);
 
+        LoginService.set_user_access_token(data.access_token);
+        LoginService.set_loggedIn(true);
+
         $scope.$broadcast('login-form', data);
+
+
 
     });
 
-});
+
+
+}]);
 
 
