@@ -1,4 +1,5 @@
 instagrammy.controller('LoginController', ['$scope', 'UserService', function($scope){
+    console.log('test commit');
 
     $scope.loggedIn = false;
 
