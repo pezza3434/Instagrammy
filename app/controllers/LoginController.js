@@ -1,6 +1,6 @@
 instagrammy.controller('LoginController', ['$scope', 'LoginService', function($scope, LoginService){
 
-    $scope.loggedIn = false;
+    $scope.loggedIn = LoginService.get_user().loggedIn;
 
     $scope.$on('login-form', function(){
        $scope.$apply(function(){

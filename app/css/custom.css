@@ -1,0 +1,11 @@
+img {
+  width: 100%;
+}
+.image-wrapper {
+  background: #eee;
+  padding: 5px;
+  margin-bottom: 35px;
+}
+.image-wrapper:hover {
+  opacity: 0.5;
+}
