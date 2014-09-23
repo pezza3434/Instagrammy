@@ -6,5 +6,13 @@ instagrammy.controller('WhatsPopularController', ['$scope', 'RequestService', fu
         console.log(data);
     });
 
+    $scope.refresh = function(){
+        RequestService.get_popular_feed().success(function(data){
+            $scope.feed = data.data;
+            console.log(data.data);
+            console.log(data);
+        });
+    };
+
 
 }]);
