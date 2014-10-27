@@ -12,6 +12,4 @@ instagrammy.controller('LoginController', ['$scope', 'LoginService', function($s
       LoginService.login();
     };
 
-
-
 }]);

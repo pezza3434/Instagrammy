@@ -1,0 +1,11 @@
+Feed
+
+//Add pagination
+//Switch between two different views
+//Show correct resolution to improve loading time
+
+Popular
+
+//Add validation for spaces in tags
+
+

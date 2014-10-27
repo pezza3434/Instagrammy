@@ -1,3 +1,13 @@
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name alexappApp
+ * @description
+ * # alexappApp
+ *
+ * Main module of the application.
+ */
 var instagrammy = angular.module('instagrammy', ['ngRoute', 'ngCookies']);
 
 instagrammy.config(['$routeProvider', function($routeProvider){
@@ -5,14 +15,17 @@ instagrammy.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/loggedin.html',
         controller: 'LoginController'
     }).
-    when('/yourfeed', {
-        templateUrl: 'views/yourfeed.html'
-    }).
-    when('/popular', {
-        templateUrl: 'views/popularfeed.html'
-    }).
-    otherwise({
-            templateUrl: 'views/home.html'
+        when ('/dashboard', {
+            templateUrl: 'views/dashboard.html'
+        }).
+        when('/yourfeed', {
+            templateUrl: 'views/yourfeed.html'
+        }).
+        when('/popular', {
+            templateUrl: 'views/popularfeed.html'
+        }).
+        otherwise({
+            templateUrl: 'views/dashboard.html'
         });
 }]);
 
@@ -30,12 +43,9 @@ instagrammy.controller('AppController', ['$scope', 'LoginService', '$cookieStore
 
         $scope.$broadcast('login-form', data);
 
-
+        console.log('hit app controller');
 
     });
 
 
-
 }]);
-
-

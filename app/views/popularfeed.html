@@ -2,6 +2,15 @@
 <div class="row">
     <button class="btn" ng-click="refresh()">Refresh</button>
 </div>
+
+<div class="row">
+    <form ng-submit="submit()">
+        Enter text and hit enter:
+        <input type="text" name="text" ng-model="input_text" />
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+</div>
+
 <div class="row">
     <div class="col-md-3" ng-repeat="image in feed">
         <div class="image-wrapper">
