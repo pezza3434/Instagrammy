@@ -20,6 +20,9 @@ instagrammy.config(['$routeProvider', function($routeProvider){
         when ('/dashboard', {
             templateUrl: 'views/dashboard.html'
         }).
+        when ('/login', {
+            templateUrl: 'views/login.html'
+        }).
         when('/yourfeed', {
             templateUrl: 'views/yourfeed.html'
         }).
@@ -30,6 +33,18 @@ instagrammy.config(['$routeProvider', function($routeProvider){
             templateUrl: 'views/dashboard.html'
         });
 }]);
+
+instagrammy.run(function($rootScope, $location, LoginService) {
+    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+        if (!LoginService.get_user().loggedIn) {
+            // no logged user, redirect to /login
+            if (next.templateUrl === "views/login.html") {
+            } else {
+                $location.path("/login");
+            }
+        }
+    });
+});
 
 instagrammy.controller('AppController', ['$scope', 'LoginService', '$cookieStore', function($scope, LoginService, $cookieStore){
 
