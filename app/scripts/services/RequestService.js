@@ -1,7 +1,6 @@
 var RequestService = function($http, $cookieStore){
 
     var access_token = $cookieStore.get('access_token');
-    console.log(access_token);
 
     this.get_user_details = function(){
         var link = 'https://api.instagram.com/v1/users/self?access_token=' + access_token + '&callback=JSON_CALLBACK';

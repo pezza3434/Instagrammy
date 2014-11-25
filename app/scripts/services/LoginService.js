@@ -14,6 +14,7 @@
      };
 
      this.set_user_access_token = function(value){
+         console.log(value);
          user.access_token = value;
      };
 

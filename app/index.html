@@ -17,7 +17,7 @@
   </head>
   <body>
   <div class="container" ng-controller="LoginController">
-      <div class="row">
+      <div class="row" ng-if="loggedIn">
           <nav class="navbar navbar-default" role="navigation">
               <div class="container-fluid">
                   <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,7 +50,7 @@
 
   <!-- Begin main body -->
   <div class="container">
-      <div ng-view ng-show="loggedIn"></div>
+      <div ng-view ng-if="loggedIn"></div>
   </div>
   <!-- End main body -->
 
