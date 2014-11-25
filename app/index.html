@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-controller="AppController">
+  <body>
   <div class="container" ng-controller="LoginController">
       <div class="row">
           <nav class="navbar navbar-default" role="navigation">
@@ -50,7 +50,7 @@
 
   <!-- Begin main body -->
   <div class="container">
-      <div ng-view></div>
+      <div ng-view ng-show="loggedIn"></div>
   </div>
   <!-- End main body -->
 

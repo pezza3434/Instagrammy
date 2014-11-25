@@ -1,7 +1,10 @@
 {
   "name": "alexapp",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "chai": "^1.10.0",
+    "karma-chai": "^0.1.0"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
@@ -27,8 +30,10 @@
     "jshint-stylish": "^0.2.0",
     "karma": "^0.12.23",
     "karma-jasmine": "^0.1.5",
+    "karma-mocha": "^0.1.9",
     "karma-phantomjs-launcher": "^0.1.4",
     "load-grunt-tasks": "^0.4.0",
+    "mocha": "^2.0.1",
     "time-grunt": "^0.3.1"
   },
   "engines": {

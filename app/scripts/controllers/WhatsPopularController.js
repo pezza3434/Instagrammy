@@ -10,7 +10,7 @@ instagrammy.controller('WhatsPopularController', ['$scope', 'RequestService', fu
         });
     };
 
-    $scope.submit = function(data){
+    $scope.submit = function(){
         console.log($scope.input_text);
         RequestService.get_popular_from_tag($scope.input_text).success(function(data){
             $scope.feed = data.data;

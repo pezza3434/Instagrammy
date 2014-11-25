@@ -6,7 +6,7 @@
 
      this.login = function(){
          var url = 'https://api.instagram.com/oauth/authorize/?client_id=42278e9a9ba04d12b0d308f00129cd69&redirect_uri=http://localhost:9000/callback.html&response_type=token';
-         var w = window.open(url, 'Instagram', 'WIDTH=400,HEIGHT=600');
+         window.open(url, 'Instagram', 'WIDTH=400,HEIGHT=600');
      };
 
      this.set_loggedIn = function(value){
@@ -22,12 +22,12 @@
             user.loggedIn = true;
         }
          return user;
-     }
+     };
  };
 
 
 
 
 
-angular.module('instagrammy').service('LoginService', ['$cookieStore', LoginService]);
+instagrammy.service('LoginService', ['$cookieStore', LoginService]);
 

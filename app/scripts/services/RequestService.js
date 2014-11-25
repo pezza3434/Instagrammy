@@ -27,8 +27,8 @@ var RequestService = function($http, $cookieStore){
         var link = 'https://api.instagram.com/v1/tags/'+ tag +'/media/recent?access_token=' + access_token + '&callback=JSON_CALLBACK';
         return $http.jsonp(link);
     };
-}
+};
 
-angular.module('instagrammy').service('RequestService',['$http', '$cookieStore', RequestService]);
+instagrammy.service('RequestService',['$http', '$cookieStore', RequestService]);
 
 

@@ -8,7 +8,9 @@
  *
  * Main module of the application.
  */
+/* jshint ignore:start */
 var instagrammy = angular.module('instagrammy', ['ngRoute', 'ngCookies']);
+/* jshint ignore:end */
 
 instagrammy.config(['$routeProvider', function($routeProvider){
     $routeProvider.when('/loggedin', {
