@@ -1,1 +1,2 @@
-Instagrammy is an instagram API application
+###Instagrammy is an Instagram API application
+
