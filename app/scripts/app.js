@@ -35,12 +35,12 @@ instagrammy.config(['$routeProvider', function($routeProvider){
 }]);
 
 instagrammy.run(function($rootScope, $location, LoginService) {
-    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+    $rootScope.$on("$routeChangeStart", function (event, next) {
         if (!LoginService.get_user().loggedIn) {
             // no logged user, redirect to /login
-            if (next.templateUrl === "views/login.html") {
+            if (next.templateUrl === 'views/login.html') {
             } else {
-                $location.path("/login");
+                $location.path('/login');
             }
         }
     });
