@@ -11,7 +11,7 @@
     </form>
 </div>
 
-<div class="row">
+<div class="row" ng-show="feed">
     <div class="col-md-3" ng-repeat="image in feed">
         <div class="image-wrapper">
             <a href="http://www.instagram.com/{{image.user.username}}"><img src="{{image.images.standard_resolution.url}}" /> </a>
